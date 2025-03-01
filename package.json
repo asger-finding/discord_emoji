@@ -1,0 +1,16 @@
+{
+    "name": "discord_emoji",
+    "version": "0.1.0",
+    "description": "Discord emojis table",
+    "main": "mod.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/asger-finding/discord_emoji"
+    },
+    "keywords": [],
+    "author": "Asger Finding",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {}
+}

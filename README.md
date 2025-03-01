@@ -1,48 +1,28 @@
 # discord-emoji
 
-A near exact emoji tables of Discord for string-based insertion of emotes
-without having to escape Unicode.
+Simple discord emoji library derived from the great work by [xCykrix and Necktrox](https://github.com/xCykrix/discord_emoji/).
 
-Find more in-depth guidance and documentation can be found on the
-[GitHub Wiki](https://github.com/xCykrix/discord_emoji/wiki).
-
-![GitHub License](https://img.shields.io/github/license/xCykrix/discord_emoji?style=for-the-badge&logo=github&cacheSeconds=86400)
-![GitHub Issues](https://img.shields.io/github/issues/xCykrix/discord_emoji?style=for-the-badge&logo=github&cacheSeconds=3600)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/xCykrix/discord_emoji?style=for-the-badge&logo=github&cacheSeconds=3600)
+A near exact emoji tables of Discord for string-based insertion of emotes without having to escape Unicode. No skin accents or categories.
 
 ## Install / Usage
 
 ```ts
-// Deno
-import * as dismoji from "https://deno.land/x/discord_emoji@2./mod.ts";
-
 // Node.js
-// $ npm install discord-emoji
+// $ pnpm add github:asger-finding/discord_emoji
 const dismoji = require("discord-emoji");
 
-// Examples of Assertions. dismoji.category.identifier
-assertEquals(dismoji.people.grinning, "😀");
-assertEquals(dismoji.nature.dog, "🐶");
-assertEquals(dismoji.food.hamburger, "🍔");
-assertEquals(dismoji.activity.basketball, "🏀");
-assertEquals(dismoji.travel.airplane, "✈️");
-assertEquals(dismoji.objects.watch, "⌚");
-assertEquals(dismoji.symbols.eight_pointed_black_star, "✴️");
-assertEquals(dismoji.flags.flag_us, "🇺🇸");
+// Examples of Assertions. dismoji.identifier
+assertEquals(dismoji.grinning, "😀");
+assertEquals(dismoji.dog, "🐶");
+assertEquals(dismoji.hamburger, "🍔");
+assertEquals(dismoji.basketball, "🏀");
+assertEquals(dismoji.airplane, "✈️");
+assertEquals(dismoj.watch, "⌚");
+assertEquals(dismoji.eight_pointed_black_star, "✴️");
+assertEquals(dismoji.flag_us, "🇺🇸");
 ```
-
-## Contributing
-
-Please review my
-[CONTRIBUTING.md](https://github.com/xCykrix/.github/blob/main/.github/CONTRIBUTING.md)
-for the basis of the development environment.
-
-Use of nushell is required for scripting.
-
-## Support
-
-For support, please open an issue or reach out via Discord.
 
 ## Acknowledgements
 
+- xCykrix: Author (Samuel Voeller)
 - Necktrox: Previous Author (Marek Kulik)
