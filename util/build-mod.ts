@@ -111,7 +111,7 @@ const output: string[] = [
 
 const flattened = [ ...Object.values(result) ].flat();
 
-output.push('export const emojis = {');
+output.push('export default {');
 
 for (const i of Object.values(flattened)) {
   const emoji: Emoji = i;
