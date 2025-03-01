@@ -9,17 +9,22 @@ A near exact emoji tables of Discord for string-based insertion of emotes withou
 ```ts
 // Node.js
 // $ pnpm add github:asger-finding/discord_emoji
-const dismoji = require("discord-emoji");
+
+// cjs
+const dismoji = require('discord_-_emoji');
+
+// esm
+import dismoji from 'discord_emoji';
 
 // Examples of Assertions. dismoji.identifier
-assertEquals(dismoji.grinning, "😀");
-assertEquals(dismoji.dog, "🐶");
-assertEquals(dismoji.hamburger, "🍔");
-assertEquals(dismoji.basketball, "🏀");
-assertEquals(dismoji.airplane, "✈️");
-assertEquals(dismoj.watch, "⌚");
-assertEquals(dismoji.eight_pointed_black_star, "✴️");
-assertEquals(dismoji.flag_us, "🇺🇸");
+assertEquals(dismoji.grinning, '😀');
+assertEquals(dismoji.dog, '🐶');
+assertEquals(dismoji.hamburger, '🍔');
+assertEquals(dismoji.basketball, '🏀');
+assertEquals(dismoji.airplane, '✈️');
+assertEquals(dismoj.watch, '⌚');
+assertEquals(dismoji.eight_pointed_black_star, '✴️');
+assertEquals(dismoji.flag_us, '🇺🇸');
 ```
 
 ## Acknowledgements
