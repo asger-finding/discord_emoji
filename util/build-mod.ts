@@ -56,17 +56,17 @@ for (const asset of await assets()) {
   let js = await source.text();
 
   // Skip the assets which do not include the expected snippet.
-  if (!js.includes(`e.exports=JSON.parse('{"people":[`)) {
+  if (!js.includes(`e.exports=JSON.parse('{"emojis":[`)) {
     console.info(`Skipped: ${asset}`);
     continue;
   }
 
   // Asset found. Extract emoji index.
   console.info(`Found emoji-index within: ${asset}`);
-  js =
-    js.toString().match(
-      /(e\.exports=JSON.parse\('{"people":.*"unicodeVersion":6}]}'\))/gm,
+  js = js.match(
+      /(e\.exports=JSON\.parse\('{"emojis":\[.*,"unicodeVersion":6}])/gm,
     )![0];
+
   // Extract to file and build with eval.
   const src = `
     class EIndex {
@@ -74,7 +74,7 @@ for (const asset of await assets()) {
       e = { exports: {} }
 
       constructor() {
-        _REPLACE_ME_WITH_JS_SRC
+        _REPLACE_ME_WITH_JS_SRC}');
       }
 
       extract() {
