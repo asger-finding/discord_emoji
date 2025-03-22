@@ -2,7 +2,7 @@
 // This file is generated automatically with "deno task build" and should not be modified manually.
 // Please do not commit changes to this file. They will be rejected regardless of proposed changes.
 //
-// GENERATED: Sat Mar 01 2025 17:22:29 GMT+0100 (Central European Standard Time)
+// GENERATED: Sat Mar 22 2025 23:04:45 GMT+0100 (Central European Standard Time)
 
 export default {
   "grinning": "😀",
