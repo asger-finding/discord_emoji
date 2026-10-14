@@ -1,33 +1,41 @@
-# discord-emoji
+# discord_emoji
 
-Simple discord emoji library derived from the great work by [xCykrix and Necktrox](https://github.com/xCykrix/discord_emoji/).
+Discord's emoji table as a plain object, so you can insert emojis by name without escaping Unicode. Derived from the work by [xCykrix and Necktrox](https://github.com/xCykrix/discord_emoji/).
 
-A near exact emoji tables of Discord for string-based insertion of emotes without having to escape Unicode. No skin accents or categories.
+Each emoji appears once under its primary Discord name. Skin tone variants, aliases and categories are left out.
 
-## Install / Usage
+## Installation
 
-```ts
-// Node.js
-// $ pnpm add github:asger-finding/discord_emoji
-
-// cjs
-const dismoji = require('discord_-_emoji');
-
-// esm
-import dismoji from 'discord_emoji';
-
-// Examples of Assertions. dismoji.identifier
-assertEquals(dismoji.grinning, '😀');
-assertEquals(dismoji.dog, '🐶');
-assertEquals(dismoji.hamburger, '🍔');
-assertEquals(dismoji.basketball, '🏀');
-assertEquals(dismoji.airplane, '✈️');
-assertEquals(dismoj.watch, '⌚');
-assertEquals(dismoji.eight_pointed_black_star, '✴️');
-assertEquals(dismoji.flag_us, '🇺🇸');
+```sh
+npm install @asger-finding/discord_emoji
 ```
+
+## Usage
+
+```js
+import emoji from '@asger-finding/discord_emoji';
+// or: const emoji = require('@asger-finding/discord_emoji');
+
+emoji.grinning;                 // '😀'
+emoji.dog;                      // '🐶'
+emoji.airplane;                 // '✈️'
+emoji.eight_pointed_black_star; // '✴️'
+emoji.flag_us;                  // '🇺🇸'
+```
+
+The typings list every name with its emoji, so editors autocomplete names and TypeScript rejects unknown ones.
+
+## Development
+
+Development needs Node.js 22.18 or later.
+
+| Command          | Description                                                                   |
+| ---------------- | ----------------------------------------------------------------------------- |
+| `npm run scrape` | Downloads Discord's web client and regenerates `index.js`, `index.cjs` and their typings |
+| `npm test`       | Type checks and runs the tests                                                |
+| `npm run lint`   | Lints with the strict typescript-eslint rules                                 |
 
 ## Acknowledgements
 
-- xCykrix: Author (Samuel Voeller)
-- Necktrox: Previous Author (Marek Kulik)
+- xCykrix (Samuel Voeller): author
+- Necktrox (Marek Kulik): previous author

@@ -1,16 +1,60 @@
 {
-    "name": "discord_emoji",
-    "version": "0.1.0",
-    "description": "Discord emojis table",
-    "main": "mod.js",
-    "scripts": {},
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/asger-finding/discord_emoji"
-    },
-    "keywords": [],
-    "author": "Asger Finding",
-    "license": "MIT",
-    "dependencies": {},
-    "devDependencies": {}
+  "name": "@asger-finding/discord_emoji",
+  "version": "1.0.0",
+  "description": "Discord's emoji table as a plain object, so you can insert emojis by name without escaping Unicode.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "require": {
+        "types": "./index.d.cts",
+        "default": "./index.cjs"
+      }
+    }
+  },
+  "main": "./index.cjs",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.cjs",
+    "index.d.ts",
+    "index.d.cts"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "scrape": "node scripts/scrape.ts",
+    "lint": "eslint --flag unstable_native_nodejs_ts_config .",
+    "test": "tsc && node --test \"test/*.test.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asger-finding/discord_emoji.git"
+  },
+  "keywords": [
+    "discord",
+    "emoji",
+    "emojis",
+    "unicode",
+    "shortcode"
+  ],
+  "author": "Asger Finding",
+  "contributors": [
+    "Samuel Voeller",
+    "Marek Kulik"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asger-finding/discord_emoji/issues"
+  },
+  "homepage": "https://github.com/asger-finding/discord_emoji#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.12.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2"
+  }
 }
