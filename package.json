@@ -1,6 +1,6 @@
 {
   "name": "@asger-finding/discord_emoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord's emoji table as a plain object, so you can insert emojis by name without escaping Unicode.",
   "type": "module",
   "exports": {
